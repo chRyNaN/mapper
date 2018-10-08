@@ -5,10 +5,7 @@ package com.chrynan.mapper
  * needs to be mapped to a presentation layer model, an implementation of this interface would provide a way to map
  * from the domain layer entity to the presentation layer model.
  */
-interface UniDirectionalMapper<in T, out R> : Mapper,
-        ((T) -> R) {
-
-    override fun invoke(value: T) = map(value)
+interface UniDirectionalMapper<in T, out R> {
 
     fun map(value: T): R
 }
