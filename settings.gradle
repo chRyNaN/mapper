@@ -1,4 +1,13 @@
+pluginManagement {
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == "kotlin-multiplatform") {
+                useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:${requested.version}")
+            }
+        }
+    }
+}
+
 rootProject.name = 'mapper'
-include 'mapper-common'
-include 'mapper-jvm'
-include 'mapper-js'
+
+enableFeaturePreview('GRADLE_METADATA')
