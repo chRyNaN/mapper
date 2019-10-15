@@ -1,9 +1,17 @@
 # mapper
-A simple collection of interfaces for mapping objects.
+A simple collection of interfaces for mapping between objects.
 
-I was tired of creating the same interfaces so made an extremely simple library to encapsulate them. Originally this library had additional functionality but was vague. Now this library contains two interfaces for mapping between different objects: the `UniDirectionalMapper` and the `BiDirectionalMapper`.
-This Project is a platform agnostic Kotlin library as it's only dependencies are on the Kotlin Common Library and it only contains two interfaces.
+I was tired of recreating these interfaces for every project so I made a library for them.
 
+![Build CI Badge](https://github.com/chRyNaN/mapper/workflows/Build/badge.svg)
+
+### Using the library
+
+This library contains two simple mapping interfaces: `UniDirectionalMapper` and `BiDirectionalMapper`. There is also a typealias, `Mapper`, for the `UniDirectionalMapper` interface.
+
+There are both suspending and non-suspending versions of each function on the interfaces. Ex: `map` and `mapSuspending`.
+
+### Building
 This project is accesssible through [Jitpack](https://jitpack.io/#chRyNaN/mapper/v1.0.1-SNAPSHOT):
 
 [![](https://jitpack.io/v/chRyNaN/mapper.svg)](https://jitpack.io/#chRyNaN/mapper)
