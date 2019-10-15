@@ -5,9 +5,13 @@ package com.chrynan.mapper
  * database counterpart, an implementation of this interface would provide a way to map between both these entities.
  */
 @Suppress("unused")
-interface BiDirectionalMapper<T1, T2> {
+interface BiDirectionalMapper<IN, OUT> {
 
-    fun mapIn(value: T1): T2
+    fun mapIn(value: IN): OUT
 
-    fun mapOut(value: T2): T1
+    fun mapOut(value: OUT): IN
+
+    suspend fun mapInSuspending(value: IN): OUT = mapIn(value = value)
+
+    suspend fun mapOutSuspending(value: OUT): IN = mapOut(value = value)
 }

@@ -9,4 +9,6 @@ package com.chrynan.mapper
 interface UniDirectionalMapper<in T, out R> {
 
     fun map(value: T): R
+
+    suspend fun mapSuspending(value: T): R = map(value = value)
 }
