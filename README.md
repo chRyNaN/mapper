@@ -11,20 +11,39 @@ This library contains two simple mapping interfaces: `UniDirectionalMapper` and 
 
 There are both suspending and non-suspending versions of each function on the interfaces. Ex: `map` and `mapSuspending`.
 
+#### Unidirectional Mapping
+```kotlin
+class MyMapper : Mapper<Model, ViewModel> {
+
+    override fun map(value: Model): ViewModel = ...
+}
+
+...
+
+// Using the Mapper
+val viewModel = mapper.map(value = myModel)
+// Or in a Flow
+getFlowOfModels()
+    .map(mapper::mapSuspending)
+```
+
+#### BiDirectional Mapping
+```kotlin
+class MyMapper : BiDirectionalMapper<InModel, OutModel> {
+
+    override fun mapIn(value: InModel): OutModel = ...
+
+    override fun mapOut(value: OutModel): InModel = ...
+}
+
+// Using the Mapper
+val mapOut = mapper.mapIn(value = mapIn)
+val mapInAgain = mapper.mapOut(value = mapOut)
+// Or in a Flow
+getFlowOfModels()
+    .map(mapper::mapInSuspending) // Or .map(mapper::mapOutSuspending)
+```
+
 ### Building
-This project is accesssible through [Jitpack](https://jitpack.io/#chRyNaN/mapper/v1.0.1-SNAPSHOT):
 
-[![](https://jitpack.io/v/chRyNaN/mapper.svg)](https://jitpack.io/#chRyNaN/mapper)
-
-**Kotlin Common Project:**
-```
-implementation 'com.github.chRyNaN.mapper:mapper-common:VERSION'
-```
-**JVM Project:**
-```
-implementation 'com.github.chRyNaN.mapper:mapper-jvm:VERSION'
-```
-**JS Project:**
-```
-implementation 'com.github.chRyNaN.mapper:mapper-js:VERSION'
-```
+This project should be accessible through Github Packages. Checkout the "packages" tab for more information.
