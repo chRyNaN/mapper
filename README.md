@@ -5,13 +5,13 @@ I was tired of recreating these interfaces for every project so I made a library
 
 ![Build CI Badge](https://github.com/chRyNaN/mapper/workflows/Build/badge.svg)
 
-### Using the library
+## Using the library
 
 This library contains two simple mapping interfaces: `UniDirectionalMapper` and `BiDirectionalMapper`. There is also a typealias, `Mapper`, for the `UniDirectionalMapper` interface.
 
 There are both suspending and non-suspending versions of each function on the interfaces. Ex: `map` and `mapSuspending`.
 
-#### Unidirectional Mapping
+### Unidirectional Mapping
 ```kotlin
 class MyMapper : Mapper<Model, ViewModel> {
 
@@ -27,7 +27,7 @@ getFlowOfModels()
     .map(mapper::mapSuspending)
 ```
 
-#### BiDirectional Mapping
+### BiDirectional Mapping
 ```kotlin
 class MyMapper : BiDirectionalMapper<InModel, OutModel> {
 
@@ -44,6 +44,33 @@ getFlowOfModels()
     .map(mapper::mapInSuspending) // Or .map(mapper::mapOutSuspending)
 ```
 
-### Building
+## Building
 
-This project should be accessible through Github Packages. Checkout the "packages" tab for more information.
+The library is provided through [Bintray](https://bintray.com/). Refer to the [releases page](https://github.com/chRyNaN/mapper/releases) for the latest version.
+
+### Repository
+
+```kotlin
+repositories {
+    maven {
+        url = uri("https://dl.bintray.com/chrynan/chrynan")
+    }
+}
+```
+
+### Dependencies
+
+**Kotlin Common Core Module:**
+```kotlin
+implementation("com.chrynan.mapper:mapper-core:$VERSION")
+```
+
+**Kotlin JVM Module:**
+```kotlin
+implementation("com.chrynan.mapper:mapper-core-jvm:$VERSION")
+```
+
+**Kotlin JS Module:**
+```kotlin
+implementation("com.chrynan.mapper:mapper-core-js:$VERSION")
+```
