@@ -1,0 +1,11 @@
+$dokka.format:gfm-v1
+$dokka.linkExtension:md
+$dokka.location:com.chrynan.mapper.core////PointingToDeclaration/mapper-core/com.chrynan.mapper.core/index.md
+$dokka.location:com.chrynan.mapper.core//invoke/com.chrynan.mapper.core.UniDirectionalMapper[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])]#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/mapper-core/com.chrynan.mapper.core/invoke.md
+$dokka.location:com.chrynan.mapper.core/BiDirectionalMapper///PointingToDeclaration/mapper-core/com.chrynan.mapper.core/-bi-directional-mapper/index.md
+$dokka.location:com.chrynan.mapper.core/BiDirectionalMapper/mapIn/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/mapper-core/com.chrynan.mapper.core/-bi-directional-mapper/map-in.md
+$dokka.location:com.chrynan.mapper.core/BiDirectionalMapper/mapOut/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/mapper-core/com.chrynan.mapper.core/-bi-directional-mapper/map-out.md
+$dokka.location:com.chrynan.mapper.core/UniDirectionalMapper///PointingToDeclaration/mapper-core/com.chrynan.mapper.core/-uni-directional-mapper/index.md
+$dokka.location:com.chrynan.mapper.core/UniDirectionalMapper/map/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/mapper-core/com.chrynan.mapper.core/-uni-directional-mapper/map.md
+com.chrynan.mapper.core
+
