@@ -11,7 +11,7 @@ buildscript {
         maven { url = "https://dl.bintray.com/chrynan/chrynan" }
     }
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.31"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.0"
         classpath "org.jetbrains.dokka:dokka-gradle-plugin:1.4.30"
         classpath "com.chrynan.target:target-plugin:0.1.0"
     }
@@ -27,10 +27,6 @@ allprojects {
         maven { url = "https://dl.bintray.com/chrynan/chrynan" }
         maven { url = "https://repo.repsy.io/mvn/chrynan/public" }
     }
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
 }
 
 // Documentation
