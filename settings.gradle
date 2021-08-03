@@ -1,5 +1,3 @@
 rootProject.name = "mapper"
 
 include ":mapper-core"
-
-enableFeaturePreview("GRADLE_METADATA")
