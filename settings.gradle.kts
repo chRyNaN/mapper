@@ -1,3 +1,3 @@
 rootProject.name = "mapper"
 
-include ":mapper-core"
+include(":mapper-core")
