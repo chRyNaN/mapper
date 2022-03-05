@@ -2,13 +2,12 @@ package com.chrynan.mapper.buildSrc
 
 object LibraryConstants {
 
-    const val bintrayRepo = "chrynan"
     const val group = "com.chrynan.mapper"
     const val owner = "chrynan"
     const val repoName = "mapper"
-    const val versionName = "1.5.2"
-    const val versionCode = 3
-    const val versionDescription = "Release 1.5.2 (3)"
+    const val versionName = "1.6.0"
+    const val versionCode = 4
+    const val versionDescription = "Release $versionName ($versionCode)"
     const val license = "Apache-2.0"
     const val vcsUrl = "https://github.com/chRyNaN/mapper.git"
 
